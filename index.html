@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="src/styleWA.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather application</title>
     <link
@@ -12,28 +12,49 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styleWA.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Ozimek</h1>
-      <ul>
-        <li>Wednesday</li>
-        <li>Partly Cloudy</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <img src="images/partly_cloudy.png" alt="Partly_cloudy" />
-          22ºC | ºF
-        </div>
-        <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <h1>Ozimek</h1>
           <ul>
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 73%</li>
-            <li>Wind: 2 km/h</li>
+            <li>Wednesday</li>
+            <li>Partly Cloudy</li>
           </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="images/partly_cloudy.png"
+                  alt="Partly_cloudy"
+                  id="icon"
+                />
+                <div>
+                  <strong id="temperature">22</strong
+                  ><span class="units">°C | <a href="#">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 73%</li>
+                <li>Wind: 2 km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/Yuldenys/Vanilla-WeatherApp"
+            target="_blank"
+            >Open source code</a
+          >
+          by Yuliya Denysenko
+        </small>
       </div>
-      <a href="" class="btn btn-primary">Current city</a>
     </div>
     <script src="src/Wapp.js"></script>
   </body>
